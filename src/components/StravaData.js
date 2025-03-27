@@ -72,28 +72,28 @@ const StravaData = () => {
                         <YAxis stroke="#555" domain={[100, 200]} />
                         <Tooltip />
                         <Legend />
-                        <ReferenceArea y1={maxHeartRate * 0.6} y2={maxHeartRate * 0.7} fill="#4682b4" opacity={0.5} />
-                        <ReferenceArea y1={maxHeartRate * 0.7} y2={maxHeartRate * 0.8} fill="#90ee90" opacity={0.5} />
-                        <ReferenceArea y1={maxHeartRate * 0.8} y2={maxHeartRate * 0.9} fill="#8A2BE2" opacity={0.5} />
-                        <ReferenceArea y1={maxHeartRate * 0.9} y2={maxHeartRate} fill="#ff0000" opacity={0.5} />
+                        <ReferenceArea y1={Math.round(maxHeartRate * 0.6)} y2={Math.round(maxHeartRate * 0.7)} fill="#4682b4" opacity={0.5} />
+                        <ReferenceArea y1={Math.round(maxHeartRate * 0.7)} y2={Math.round(maxHeartRate * 0.8)} fill="#90ee90" opacity={0.5} />
+                        <ReferenceArea y1={Math.round(maxHeartRate * 0.8)} y2={Math.round(maxHeartRate * 0.9)} fill="#8A2BE2" opacity={0.5} />
+                        <ReferenceArea y1={Math.round(maxHeartRate * 0.9)} y2={maxHeartRate} fill="#ff0000" opacity={0.5} />
                         <Line type="monotone" dataKey="avg_heart_rate" stroke="#ff7300" strokeWidth={3} name="Heart Rate (bpm)" />
                     </LineChart>
                 </ResponsiveContainer>
                 <div className="mt-2 flex items-center text-gray-600 text-sm">
                     <div className="w-4 h-4 bg-[#4682b4] mr-2"></div>
-                    <span>Zone 2 : {maxHeartRate * 0.6}-{maxHeartRate * 0.7} 지방연소 영역(40-80분)</span>
+                    <span>Zone 2 : {Math.round(maxHeartRate * 0.6)}-{Math.round(maxHeartRate * 0.7)} 지방연소 영역(40-80분)</span>
                 </div>
                 <div className="mt-2 flex items-center text-gray-600 text-sm">
                     <div className="w-4 h-4 bg-[#90ee90] mr-2"></div>
-                    <span>Zone 3 : {maxHeartRate * 0.7}-{maxHeartRate * 0.8} 유산소 영역(10-40분)</span>
+                    <span>Zone 3 : {Math.round(maxHeartRate * 0.7)}-{Math.round(maxHeartRate * 0.8)} 유산소 영역(10-40분)</span>
                 </div>
                 <div className="mt-2 flex items-center text-gray-600 text-sm">
                     <div className="w-4 h-4 bg-[#8A2BE2] mr-2"></div>
-                    <span>Zone 4 : {maxHeartRate * 0.8}-{maxHeartRate * 0.9} 고강도 영역(2-10분)</span>
+                    <span>Zone 4 : {Math.round(maxHeartRate * 0.8)}-{Math.round(maxHeartRate * 0.9)} 고강도 영역(2-10분)</span>
                 </div>           
                 <div className="mt-2 flex items-center text-gray-600 text-sm">
                     <div className="w-4 h-4 bg-[#ff0000] mr-2"></div>
-                    <span>Zone 5 : {maxHeartRate * 0.9}-{maxHeartRate} 무산소 영역(5분 미만)</span>
+                    <span>Zone 5 : {Math.round(maxHeartRate * 0.9)}-{maxHeartRate} 무산소 영역(5분 미만)</span>
                 </div>                          
             </div>
 
